@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+  
+  <div class="container">
+  <a href="/logout">Logout</a>
+  <h2>Infected Computers</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Computer</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+	  {% for item in all %}
+      <tr>
+        <td>{{ item[1] }}</td>
+        <td>{{ item[2] }}</td>
+        <td>{{ item[3] }}</td>
+        <td>{{ item[4] }}</td>
+      </tr>
+   {% endfor %}
+    </tbody>
+  </table>
+</div>
+	
+{% endblock %}
