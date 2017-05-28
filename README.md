@@ -56,6 +56,7 @@ Ransomware application is developed at C++ language. Dashboard is developed at P
 
 Project's video tutorial was uploaded to Youtube and link is below.
 
+
 https://www.youtube.com/watch?v=8PhgfVFwM7w&t=1s
 
 #### Relec Capabilities
