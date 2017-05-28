@@ -55,6 +55,7 @@ This project only educational purpose. Don't use it for real world application.
 Ransomware application is developed at C++ language. Dashboard is developed at Python via flask framework.
 
 Project's video tutorial was uploaded to Youtube and link is below.
+
 https://www.youtube.com/watch?v=8PhgfVFwM7w&t=1s
 
 #### Relec Capabilities
