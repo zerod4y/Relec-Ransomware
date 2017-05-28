@@ -58,6 +58,9 @@ namespace {
 
 	int getHeaderLength(char *content)
 	{
+		if (content == NULL)
+			return 0;
+
 		const char *srchStr1 = "\r\n\r\n", *srchStr2 = "\n\r\n\r";
 		char *findPos;
 		int ofset = -1;
@@ -288,7 +291,13 @@ void GeneralOperation::LockFiles()
 	setupUrl.append("&p=");
 	setupUrl.append(hashedPassword);
 
-	std::string result = FetchDataFromURL(HOST_NAME, setupUrl, HOST_PORT, "POST");
+	std::string result = "0";
+	try
+	{
+		result = FetchDataFromURL(HOST_NAME, setupUrl, HOST_PORT, "POST");
+	}
+	catch (int) {
+	}
 
 	if (result.compare("1") == 0)
 	{

