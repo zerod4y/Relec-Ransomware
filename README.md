@@ -14,6 +14,8 @@ https://www.youtube.com/watch?v=8PhgfVFwM7w&t=1s
 * Downloading wallpaper from web and changing system wallpaper settings.
 * File encryption and decryptions operations.
 * Storing encryption key at server.
+* No external dependancies ( VC++ or MFC dll's not required )
+* Small footprint. It is only 250KB on Release mode.
 
 #### Requirements:
 - Python 2.7
